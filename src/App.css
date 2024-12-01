@@ -1,15 +1,59 @@
+/* Estructura general */
+.layout-container {
+  display: flex;
+  flex-direction: column; /* Navbar arriba, resto abajo */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.content-container {
+  display: flex;
+  flex-grow: 1; /* Ocupa el resto del espacio bajo el Navbar */
+}
+
+.sidebar {
+  width: 280px; /* Ajusta el ancho del sidebar */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border-right: 1px solid #ddd; /* Línea divisoria */
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Main estilizado */
+.main-content {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  padding: 20px;
+  overflow-y: auto; /* Scroll si el contenido es demasiado largo */
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+
+}
+body {
+  margin-bottom: 60px;
+
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 

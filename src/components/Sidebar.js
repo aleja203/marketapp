@@ -2,6 +2,7 @@ import React from "react";
 import RubroForm from "./RubroForm";
 import SubRubroForm from "./SubRubroForm";
 import ProductoForm from "./ProductoForm";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -90,14 +91,14 @@ const Sidebar = () => {
             data-bs-target="#productos-collapse"
             aria-expanded="false"
           >
-            Productos
+            Carrito
           </button>
           <div className="collapse" id="productos-collapse">
             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                {/* Placeholder para el futuro componente */}
-                <p className="text-muted">Componente Producto aquí</p>
-              </li>
+              {/* <li>
+                <p className="text-muted">Ir al carrito</p>
+              </li> */}
+              <li><Link to="/carrito">🛒 Ver Carrito</Link></li>
             </ul>
           </div>
         </li>

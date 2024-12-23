@@ -7,26 +7,14 @@ import Sidebar from "./components/Sidebar";
 import RubroForm from "./components/RubroForm";
 import SubRubroForm from "./components/SubRubroForm";
 import ProductoForm from "./components/ProductoForm";
+import { Detail } from './components/Detail';
 import Layout from "./components/Layout";
+import Carrito from "./components/Carrito";
+import Pago from "./components/Pago";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./components/style.css";
 
-// function App() {
-//   return (
-//     <div className="app-container">
-//       <Navbar />
-//       <div className="content-container">
-//         {/* <Sidebar />
-//         <Main /> */}
-//         <Layout />
-//         {/* <Routes>
-//         <Route path="/cargar-rubro" element={<RubroForm />} />
-//         <Route path="/cargar-subrubro" element={<SubRubroForm />} />
-//       </Routes> */}
-//       </div>
-//     </div>
-//   );
-// }
 
-// export default App;
 
 function App() {
   return (
@@ -38,6 +26,9 @@ function App() {
           <Route path="cargar-rubro" element={<RubroForm />} />
           <Route path="cargar-subrubro" element={<SubRubroForm />} />
           <Route path="cargar-producto" element={<ProductoForm />} />
+          <Route path={"/details/:codigo"} element={<Detail/>} />
+          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/pago" element={<Pago />} />
         </Route>
       </Routes>
     </Router>

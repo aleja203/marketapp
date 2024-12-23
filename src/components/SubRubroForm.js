@@ -32,33 +32,38 @@ const CrearSubRubro = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Crear SubRubro</h2>
 
-      <label>Nombre del SubRubro:</label>
-      <input
-        type="text"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-        required
-      />
-
-      <label>Seleccionar Rubro:</label>
-      <select
-        value={selectedRubro}
-        onChange={(e) => setSelectedRubro(e.target.value)}
-        required
-      >
-        <option value="">Seleccione un Rubro</option>
-        {rubros.map((rubro) => (
-          <option key={rubro.id} value={rubro.id}>
-            {rubro.nombre}
-          </option>
-        ))}
-      </select>
-
-      <button type="submit">Crear SubRubro</button>
-    </form>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group my-3">
+          <label className="mb-2">Cargar Subrubro</label>
+          <br/>
+        <input
+          type="text"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          required
+        />
+        </div>
+        {/* <label>Seleccionar Rubro:</label> */}
+        <select
+          value={selectedRubro}
+          onChange={(e) => setSelectedRubro(e.target.value)}
+          required
+        >
+          <option value="">Seleccione un Rubro</option>
+          {rubros.map((rubro) => (
+            <option key={rubro.id} value={rubro.id}>
+              {rubro.nombre}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        {/* <button type="submit">Crear SubRubro</button> */}
+        <button type="submit" className="btn btn-primary">
+        Crear Rubro{" "}
+      </button>
+      </form>
   );
 };
 

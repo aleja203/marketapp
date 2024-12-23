@@ -28,6 +28,7 @@ const CrearRubro = () => {
           required
         />
       </div>
+      
       <button type="submit" className="btn btn-primary">
         Crear Rubro{" "}
       </button>
